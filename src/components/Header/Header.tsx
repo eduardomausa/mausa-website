@@ -7,7 +7,7 @@ export function Header() {
     <div className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <h1 className={styles.title}>
-          <Link href='/'>Mausa Blog</Link>
+          <Link href='/'>Mausa blog</Link>
       </h1>
       <nav className={styles.navContainer}>
         <Link className={styles.styledLink} href='/'>Home</Link>
