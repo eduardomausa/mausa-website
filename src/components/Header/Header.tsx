@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './header.module.scss';
 import { Sun, Moon } from 'react-feather';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
-import { toggled } from '../../redux/features/theme-mode/theme-mode-slice';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks/redux-hooks';
+import { toggled } from '../../redux/slices/theme-mode/theme-mode-slice';
 
 export function Header() {
   const themeMode = useAppSelector((state) => state.themeMode.value)
