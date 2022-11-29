@@ -2,15 +2,18 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './header.module.scss';
 import { Sun, Moon } from 'react-feather';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
+import { toggled } from '../../redux/features/theme-mode/theme-mode-slice';
 
 export function Header() {
-  const [isThemeDark, setIsThemeDark] = useState(true);
+  const themeMode = useAppSelector((state) => state.themeMode.value)
+  const dispatch = useAppDispatch()
 
+  console.log(themeMode)
   function handleChangeTheme() {
-    setIsThemeDark(!isThemeDark)
+    dispatch(toggled())
   }
 
-  console.log(isThemeDark)
 
   return (
     <div className={styles.headerContainer}>
@@ -26,7 +29,7 @@ export function Header() {
 
         <div className={styles.changeTheme}>
           <button onClick={handleChangeTheme}>
-            {isThemeDark ?
+            {themeMode === 'dark' ?
               <Sun size={24} color="#FFF" />
               :
               <Moon size={24} color="#000" />
