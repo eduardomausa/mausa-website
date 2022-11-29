@@ -9,11 +9,9 @@ export function Header() {
   const themeMode = useAppSelector((state) => state.themeMode.value)
   const dispatch = useAppDispatch()
 
-  console.log(themeMode)
   function handleChangeTheme() {
     dispatch(toggled())
   }
-
 
   return (
     <div className={styles.headerContainer}>
