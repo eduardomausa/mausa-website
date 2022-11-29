@@ -36,15 +36,14 @@
     }
   }
 
-  .buttonContainer {
-    .button {
-      margin: 0 10px;
-      padding: 16px;
-      border: solid;
-      border-width: 2px;
-      border-color: var(--white);
-      border-radius: 50%;
-      background-color: transparent;
+  .changeTheme {
+    button {
+      all: unset;
+      cursor: pointer;
     }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

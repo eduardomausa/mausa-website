@@ -34,7 +34,16 @@ body {
   color: var(--white);
 }
 
-body, input, textarea, select, button {
+body.ligth-mode {
+  background: var(--white);
+  color: var(--gray-900);
+}
+
+body,
+input,
+textarea,
+select,
+button {
   font: 400 1rem "Comfortaa", sans-serif;
 }
 
