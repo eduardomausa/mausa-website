@@ -1,14 +1,23 @@
-import '../../styles/globals.scss'
-import type { AppProps } from 'next/app'
-import { Header } from '../components/Header'
-import { Provider } from 'react-redux'
-import { store } from '../redux/store/store'
+import type { AppProps } from "next/app";
+import { Header } from "../components/Header";
+import { Provider } from "react-redux";
+import { store, wrapper } from "../redux/store/store";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme, GlobalStyles } from "../../styles/ThemeConfig";
+import { useAppSelector } from "../redux/hooks/redux-hooks";
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
+  const themeMode = useAppSelector((state) => state.themeMode.value);
+
   return (
     <Provider store={store}>
-      <Header />
-      <Component {...pageProps} />
+      <ThemeProvider theme={themeMode === 'dark' ? darkTheme : lightTheme}>
+        <GlobalStyles />
+        <Header />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </Provider>
-  )
+  );
 }
+
+export default wrapper.withRedux(App)

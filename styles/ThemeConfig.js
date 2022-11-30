@@ -1,9 +1,12 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+  
 :root {
   --white: #ffffff;
 
@@ -30,13 +33,10 @@
 }
 
 body {
-  background: var(--gray-900);
-  color: var(--white);
-}
-
-body.ligth-mode {
-  background: var(--white);
-  color: var(--gray-900);
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+  font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+  transition: all 0.50s linear;
 }
 
 body,
@@ -55,3 +55,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+`;
+
+export const lightTheme = {
+  body: "#e1e1e6",
+  text: "#121214",
+};
+
+export const darkTheme = {
+  body: "#121214",
+  text: "#FFFFFF",
+};
