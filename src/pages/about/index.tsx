@@ -1,13 +1,16 @@
-import React from 'react';
-import styles from './about.module.scss';
+import React from "react";
+import * as S from "./about-styles";
 
 export default function About() {
   return (
-    <main className={styles.contentContainer}>
+    <S.ContentContainer>
       <h1>About me</h1>
-      <section className={styles.sectionContent}>
-        <p>I&apos;m a software developer living in Brazil. My journey in the tech industry started back in my high school</p>
-      </section>
-    </main>
+      <S.SectionContent>
+        <p>
+          I&apos;m a software developer living in Brazil. My journey in the tech
+          industry started back in my high school
+        </p>
+      </S.SectionContent>
+    </S.ContentContainer>
   );
 }

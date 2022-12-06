@@ -1,13 +1,13 @@
-import styles from './home.module.scss'
+import * as S from "./home-styles";
 
 export default function Home() {
   return (
     <>
-      <main className={styles.contentContainer}>
-        <section className={styles.sectionContent}>
-          <h2>Sharing my journey as a Software Developer.</h2>
-        </section>
-      </main>
+      <S.ContentContainer>
+        <S.SectionContent>
+          <S.Subtitle>Sharing my journey as a Software Developer.</S.Subtitle>
+        </S.SectionContent>
+      </S.ContentContainer>
     </>
-  )
+  );
 }
