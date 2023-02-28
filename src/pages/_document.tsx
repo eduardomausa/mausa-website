@@ -1,12 +1,24 @@
-import Document, { Html, Head, Main, NextScript } from "../../node_modules/next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from "../../node_modules/next/document";
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
-          <title>The Mausa Blog</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"></link>        <link rel="shortcut icon" href="/favicon-white.ico" type="image/png" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          ></link>{" "}
+          <link
+            rel="shortcut icon"
+            href="/favicon-white.ico"
+            type="image/png"
+          />
         </Head>
         <body>
           <Main />

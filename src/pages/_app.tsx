@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import { Header } from "../components/Header";
 import { Provider } from "react-redux";
 import { store, wrapper } from "../redux/store/store";
 import { darkTheme, lightTheme, GlobalStyles } from "../../styles/ThemeConfig";
@@ -13,7 +12,6 @@ function App({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <ThemeProvider theme={themeMode === "dark" ? darkTheme : lightTheme}>
         <GlobalStyles />
-        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
