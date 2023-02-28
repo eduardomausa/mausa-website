@@ -1,13 +1,10 @@
-import styles from './home.module.scss'
+import Header from "../components/Header/header";
 
 export default function Home() {
   return (
     <>
-      <main className={styles.contentContainer}>
-        <section className={styles.sectionContent}>
-          <h2>Sharing my journey as a Software Developer.</h2>
-        </section>
-      </main>
+      <title>Eduardo Mausa</title>
+      <Header />
     </>
-  )
+  );
 }
