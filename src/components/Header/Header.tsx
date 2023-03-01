@@ -24,9 +24,9 @@ export default function Header() {
     <Container>
       <Content>
         <HamburguerMenu />
-          <Title>
-            <Link href="/">Eduardo Mausa</Link>
-          </Title>
+        <Title>
+          <Link href="/">Eduardo Mausa</Link>
+        </Title>
         <Menu />
         <ChangeThemeContainer>
           <ChangeThemeButton onClick={handleChangeTheme}>
