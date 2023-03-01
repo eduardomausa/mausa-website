@@ -1,7 +1,6 @@
 import {
   Container,
   Content,
-  TitleContainer,
   Title,
   ChangeThemeContainer,
   ChangeThemeButton,
@@ -10,6 +9,8 @@ import { Sun, Moon } from "react-feather";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/redux-hooks";
 import { toggled } from "../../redux/slices/theme-mode/theme-mode-slice";
 import Link from "next/link";
+import Menu from "../Menu/Menu";
+import HamburguerMenu from "../HamburguerMenu/HamburguerMenu";
 
 export default function Header() {
   const themeMode = useAppSelector((state) => state.themeMode.value);
@@ -22,11 +23,11 @@ export default function Header() {
   return (
     <Container>
       <Content>
-        <TitleContainer>
+        <HamburguerMenu />
           <Title>
             <Link href="/">Eduardo Mausa</Link>
           </Title>
-        </TitleContainer>
+        <Menu />
         <ChangeThemeContainer>
           <ChangeThemeButton onClick={handleChangeTheme}>
             {themeMode === "dark" ? (
