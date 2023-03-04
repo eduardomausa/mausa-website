@@ -21,14 +21,14 @@ export default function HamburguerMenu() {
       <HamburguerMenuButton onClick={toggleHamburguerMenu} isMenuOpen={isOpen}>
         {themeMode === "dark" ? (
           isOpen ? (
-            <Close size={24} color="#FFF" />
+            <Close color="#FFF" />
           ) : (
-            <Menu size={24} color="#FFF" />
+            <Menu color="#FFF" />
           )
         ) : isOpen ? (
-          <Close size={24} color="#000" />
+          <Close color="#000" />
         ) : (
-          <Menu size={24} color="#000" />
+          <Menu color="#000" />
         )}
       </HamburguerMenuButton>
       {isOpen ? (
@@ -36,7 +36,6 @@ export default function HamburguerMenu() {
           <Link href="/">Home</Link>
           <Link href="/about">Sobre mim</Link>
           <Link href="/">Currículo</Link>
-          <Link href="/">Contato</Link>
         </HamburgerMenuNavigation>
       ) : null}
     </StyledHamburguerMenu>

@@ -6,8 +6,7 @@ export default function Menu() {
     <StyledMenu>
       <Link href="/">Home</Link>
       <Link href="/about">Sobre mim</Link>
-      <Link href="/">Currículo</Link>
-      <Link href="/">Contato</Link>
+      <Link href="/resume">Currículo</Link>
     </StyledMenu>
   );
 }
