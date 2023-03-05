@@ -1,7 +1,6 @@
 import { useAppSelector } from "../../redux/hooks/redux-hooks";
 import {
   StyledFooter,
-  CopyrightIcon,
   CopyrightContainer,
   CopyrightText,
   CopyrightTextContainer,
