@@ -1,31 +1,31 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 interface ThemeModeState {
-  value: string
+  value: string;
 }
 
 const initialState: ThemeModeState = {
-  value: 'dark'
-}
+  value: "dark",
+};
 
 const themeModeSlice = createSlice({
-  name: 'themeMode',
+  name: "themeMode",
   initialState,
   reducers: {
     toggled(state) {
       switch (state.value) {
-        case 'dark':
-          state.value = 'light'
+        case "dark":
+          state.value = "light";
           break;
-        case 'light':
-          state.value = 'dark'
+        case "light":
+          state.value = "dark";
           break;
         default:
           break;
       }
-    }
-  }
-})
+    },
+  },
+});
 
-export const { toggled } = themeModeSlice.actions
-export default themeModeSlice.reducer
+export const { toggled } = themeModeSlice.actions;
+export default themeModeSlice.reducer;

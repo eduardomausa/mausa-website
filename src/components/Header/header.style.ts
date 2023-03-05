@@ -14,7 +14,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 32px;
 `;
 
 export const Title = styled.h1`

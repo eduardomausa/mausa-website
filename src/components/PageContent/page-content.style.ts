@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const StyledAboutMe = styled.div`
+export const StyledPageContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const AboutMeSection = styled.div`
+export const PageContentSection = styled.div`
   padding: 32px 32px;
   max-width: 1120px;
   margin: 0 auto;
