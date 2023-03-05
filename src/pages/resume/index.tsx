@@ -1,14 +1,16 @@
 import React from "react";
-import PageContent from "../../components/AboutMe/PageContent";
+import PageContent from "../../components/PageContent/PageContent";
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
 export default function Resume() {
   return (
     <>
-      <Header/>
+      <Header />
       <PageContent>
         <p>Currículo</p>
       </PageContent>
+      <Footer />
     </>
-  )
+  );
 }

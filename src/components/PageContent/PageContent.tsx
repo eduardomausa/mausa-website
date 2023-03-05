@@ -5,12 +5,10 @@ interface PageContentProps {
   children: ReactElement;
 }
 
-export default function PageContent({children}: PageContentProps) {
+export default function PageContent({ children }: PageContentProps) {
   return (
     <StyledPageContent>
-      <PageContentSection>
-        {children}
-      </PageContentSection>
+      <PageContentSection>{children}</PageContentSection>
     </StyledPageContent>
   );
 }
