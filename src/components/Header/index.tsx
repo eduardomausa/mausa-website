@@ -16,11 +16,9 @@ export default function Header() {
 
   return (
     <header className={styles.headerContainer}>
-      <div className={styles.content}>
+      <div className={styles.headerContent}>
         <HamburguerMenu />
-        <h1 className={styles.title}>
-          <Link href="/">Eduardo Mausa</Link>
-        </h1>
+        <h1 className={styles.title}>Eduardo Mausa</h1>
         <Menu />
         <div className={styles.changeThemeContainer}>
           <button

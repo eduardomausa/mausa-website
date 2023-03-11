@@ -8,7 +8,7 @@ export default function Resume() {
     <>
       <Header />
       <PageContent>
-        <p>Currículo</p>
+        <p></p>
       </PageContent>
       <Footer />
     </>

@@ -22,8 +22,9 @@ export default function HamburguerMenu() {
       </button>
       {isOpen ? (
         <nav className={styles.hamburgerMenuNavigation}>
+          <Link href="/">Home</Link>
           <Link href="/about">Sobre mim</Link>
-          <Link href="/">Currículo</Link>
+          <Link href="/resume">Currículo</Link>
         </nav>
       ) : null}
     </div>
