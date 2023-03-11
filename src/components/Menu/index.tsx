@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { StyledMenu } from "./menu.style";
+import styles from "./styles.module.scss";
 
 export default function Menu() {
   return (
-    <StyledMenu>
-      <Link href="/">Home</Link>
+    <nav className={styles.menu}>
       <Link href="/about">Sobre mim</Link>
       <Link href="/resume">Currículo</Link>
-    </StyledMenu>
+    </nav>
   );
 }

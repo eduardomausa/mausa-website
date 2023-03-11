@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { PageContentSection, StyledPageContent } from "./page-content.style";
+import styles from "./styles.module.scss";
 
 interface PageContentProps {
   children: ReactElement;
@@ -7,8 +7,8 @@ interface PageContentProps {
 
 export default function PageContent({ children }: PageContentProps) {
   return (
-    <StyledPageContent>
-      <PageContentSection>{children}</PageContentSection>
-    </StyledPageContent>
+    <div className={styles.pageContent}>
+      <section className={styles.pageContentSection}>{children}</section>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import PageContent from "../../components/PageContent/PageContent";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import PageContent from "../../components/PageContent";
 
 export default function Resume() {
   return (

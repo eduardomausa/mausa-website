@@ -1,0 +1,33 @@
+.hamburguerMenu {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.hamburguerMenuButton {
+  all: unset;
+  cursor: pointer;
+  color: var(--gray-100);
+  
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.hamburgerMenuNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 160px;
+  height: 104px;
+  padding: 20px;
+  background-color: var(--gray-900);
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
