@@ -2,9 +2,5 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
-  
-  @media (max-width: 768px) {
-    display: none;
-  }
+  width: 240px;
 }
