@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { Menu, X as Close } from "react-feather";
-import { useAppSelector } from "../../redux/hooks/redux-hooks";
 import Link from "next/link";
 
 export default function HamburguerMenu() {
-  // const themeMode = useAppSelector((state) => state.themeMode.value);
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleHamburguerMenu() {
@@ -23,8 +21,7 @@ export default function HamburguerMenu() {
       {isOpen ? (
         <nav className={styles.hamburgerMenuNavigation}>
           <Link href="/">Home</Link>
-          <Link href="/about">Sobre mim</Link>
-          <Link href="/resume">Currículo</Link>
+          <Link href="/posts">Posts</Link>
         </nav>
       ) : null}
     </div>
