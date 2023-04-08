@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import { getPrismiscClient } from "../../services/prismic";
 import * as prismicR from "@prismicio/richtext";
 import styles from "./post.module.scss";
+import { ParsedUrlQuery } from "querystring";
 
 interface PostProps {
   post: {
@@ -12,6 +13,10 @@ interface PostProps {
     content: string;
     updatedAt: string;
   };
+}
+
+interface Params extends ParsedUrlQuery {
+  slug: string;
 }
 
 export default function Post({ post }: PostProps) {
@@ -38,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   params,
 }) => {
   const client = getPrismiscClient(req);
-  const { slug } = params;
+  const { slug } = params as Params;
 
   const response = await client.getByUID("post", slug, {});
 
