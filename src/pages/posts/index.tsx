@@ -1,9 +1,7 @@
 import { GetStaticProps } from "next";
-import Head from "next/head";
 import { getPrismiscClient } from "../../services/prismic";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { PrismicRichText } from "@prismicio/react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
@@ -21,8 +19,8 @@ interface PostsProps {
 export default function Posts({ posts }: PostsProps) {
   return (
     <>
-      <Header />
       <main className={styles.container}>
+        <Header />
         <div className={styles.posts}>
           {posts?.map((post) => (
             <Link key={post.slug} href={`/posts/${post.slug}`}>

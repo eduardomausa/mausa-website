@@ -1,13 +1,16 @@
 .container {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .posts {
   max-width: 720px;
   margin: 5rem auto 0;
   text-align: justify;
+  padding: 0 2rem;
 
   a {
     display: block;
