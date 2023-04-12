@@ -19,8 +19,8 @@ interface PostsProps {
 export default function Posts({ posts }: PostsProps) {
   return (
     <>
+      <Header />
       <main className={styles.container}>
-        <Header />
         <div className={styles.posts}>
           {posts?.map((post) => (
             <Link key={post.slug} href={`/posts/${post.slug}`}>

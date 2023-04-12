@@ -9,8 +9,8 @@ export default function Home() {
       <Head>
         <title>Eduardo Mausa</title>
       </Head>
+      <Header />
       <main>
-        <Header />
         <HomeDescription />
       </main>
       <Footer />
