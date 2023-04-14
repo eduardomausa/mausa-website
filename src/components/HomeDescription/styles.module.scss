@@ -3,13 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 2rem;
-  height: 640px;
+  height: 100%;
 }
 
 .title {
   font-size: 2.75rem;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 640px;
 }
 
 .description {
