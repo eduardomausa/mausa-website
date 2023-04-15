@@ -14,6 +14,8 @@ jest.mock("next/link", () => {
   };
 });
 
+(Menu as React.FunctionComponent).displayName = "Menu";
+
 describe("Menu component", () => {
   it("should render the menu component with links", () => {
     render(<Menu />);
