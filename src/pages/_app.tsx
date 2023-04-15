@@ -1,18 +1,16 @@
 import type { AppProps } from "next/app";
-import { Provider } from "react-redux";
-import { store, wrapper } from "../redux/store/store";
-import { useAppSelector } from "../redux/hooks/redux-hooks";
-import '../styles/global.scss';
+import "../styles/global.scss";
+import Link from "next/link";
+import { PrismicProvider } from "@prismicio/react";
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "../../prismicio";
 
-function App({ Component, pageProps }: AppProps) {
-
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      {/* <ThemeProvider theme={themeMode === "dark" ? darkTheme : lightTheme}> */}
+    <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+      <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
-      {/* </ThemeProvider> */}
-    </Provider>
+      </PrismicPreview>
+    </PrismicProvider>
   );
 }
-
-export default wrapper.withRedux(App);

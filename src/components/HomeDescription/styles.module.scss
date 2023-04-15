@@ -1,0 +1,27 @@
+.homeDescriptionContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  height: 100%;
+}
+
+.title {
+  font-size: 2.75rem;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 640px;
+}
+
+.description {
+  font-size: 1.25rem;
+  text-align: justify;
+  font-family: "Montserrat";
+}
