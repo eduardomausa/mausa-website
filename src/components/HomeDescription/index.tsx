@@ -1,8 +1,8 @@
-import { Avatar } from "../Avatar";
-import { Contacts } from "../Contacts";
+import Avatar from "../Avatar";
+import Contacts from "../Contacts";
 import styles from "./styles.module.scss";
 
-export function HomeDescription() {
+export default function HomeDescription() {
   return (
     <div className={styles.homeDescriptionContainer}>
       <div className={styles.infoContainer}>

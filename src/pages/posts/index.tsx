@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { getPrismiscClient } from "../../services/prismic";
+import { getPrismiscClient } from "../../services/prismic/prismic";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import Header from "../../components/Header";

@@ -10,7 +10,8 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "slicemachine": "start-slicemachine",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@prismicio/client": "^6.7.3",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@prismicio/types": "^0.2.7",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.0",

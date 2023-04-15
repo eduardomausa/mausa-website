@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import photo from "../../assets/avatar.jpg";
 
-export function Avatar() {
+export default function Avatar() {
   return (
     <div className={styles.avatarContainer}>
       <Image

@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { getPrismiscClient } from "../../services/prismic";
+import { getPrismiscClient } from "../../services/prismic/prismic";
 import * as prismicR from "@prismicio/richtext";
 import styles from "./post.module.scss";
 import { ParsedUrlQuery } from "querystring";
