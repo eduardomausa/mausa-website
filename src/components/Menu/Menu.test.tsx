@@ -5,6 +5,7 @@ import Link from "next/link";
 import "@testing-library/jest-dom/extend-expect";
 
 jest.mock("next/link", () => {
+  // eslint-disable-next-line react/display-name
   return ({ children, href }: { children: React.ReactNode; href: string }) => {
     return (
       <a href={href} data-testid="mocked-link">
@@ -13,8 +14,6 @@ jest.mock("next/link", () => {
     );
   };
 });
-
-(Menu as React.FunctionComponent).displayName = "Menu";
 
 describe("Menu component", () => {
   it("should render the menu component with links", () => {

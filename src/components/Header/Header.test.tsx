@@ -15,7 +15,7 @@ describe("Header component", () => {
   it("should render header component with logo and menu", () => {
     render(<Header />);
 
-    const logo = screen.getByText("<>");
+    const logo = screen.getByText("</>");
     const mockedMenu = screen.getByTestId("mocked-menu");
 
     expect(logo).toBeInTheDocument();
