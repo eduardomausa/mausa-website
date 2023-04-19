@@ -1,10 +1,10 @@
 .contactsContainer {
-  width: 480px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 
-  @media (max-width: 767px) {
-    width: 100%;
+  @media (min-width: 768px) {
+    width: 480px;
   }
 }
