@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <h2 className={styles.logo}>{`</>`}</h2>
+        <p className={styles.logo}>{`</>`}</p>
         <Menu />
       </div>
     </header>

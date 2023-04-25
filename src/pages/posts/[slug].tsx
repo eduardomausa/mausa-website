@@ -10,7 +10,7 @@ interface PostProps {
   post: {
     slug: string;
     title: string;
-    content: string;
+    content: Array<React.ReactNode>;
     updatedAt: string;
   };
 }
