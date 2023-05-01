@@ -37,6 +37,10 @@
     color: var(--gray-100);
     text-align: justify;
 
+    a {
+      text-decoration: underline;
+    }
+
     p,
     ul {
       margin: 1.5rem 0;
