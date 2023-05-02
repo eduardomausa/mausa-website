@@ -8,7 +8,7 @@ describe("Footer component", () => {
     render(<Footer />);
 
     const copyrightText = screen.getByText(
-      "All rights reserved © Eduardo Mausa 2023",
+      "Todos os direitos reservados © Eduardo Mausa 2023",
     );
 
     expect(copyrightText).toBeInTheDocument();
