@@ -6,7 +6,7 @@ export default function Footer() {
       <div className={styles.copyrightContainer}>
         <div className={styles.copyrightTitleContainer}>
           <p className={styles.copyrightText}>
-            All rights reserved &#169; Eduardo Mausa 2023
+            Todos os direitos reservados &#169; Eduardo Mausa 2023
           </p>
         </div>
       </div>
