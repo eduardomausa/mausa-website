@@ -1,8 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import HomeDescription from ".";
-import Contacts from "../Contacts";
-import Avatar from "../Avatar";
 import "@testing-library/jest-dom/extend-expect";
 
 jest.mock("../Avatar", () => {
