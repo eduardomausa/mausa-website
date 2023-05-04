@@ -10,21 +10,25 @@ describe("Contacts", () => {
     const instagramIcon = getByTestId("instagram-icon");
     const twitterIcon = getByTestId("twitter-icon");
     const githubIcon = getByTestId("github-icon");
+    const linkedinIcon = getByTestId("linkedin-icon");
 
     expect(instagramIcon).toBeInTheDocument();
     expect(twitterIcon).toBeInTheDocument();
     expect(githubIcon).toBeInTheDocument();
+    expect(linkedinIcon).toBeInTheDocument();
   });
 
   it("should render social media links correctly", () => {
     const { getByTestId } = render(<Contacts />);
 
-    const instagramIcon = getByTestId("instagram-link");
-    const twitterIcon = getByTestId("twitter-link");
-    const githubIcon = getByTestId("github-link");
+    const instagramLink = getByTestId("instagram-link");
+    const twitterLink = getByTestId("twitter-link");
+    const githubLink = getByTestId("github-link");
+    const linkedinLink = getByTestId("linkedin-link");
 
-    expect(instagramIcon).toBeInTheDocument();
-    expect(twitterIcon).toBeInTheDocument();
-    expect(githubIcon).toBeInTheDocument();
+    expect(instagramLink).toBeInTheDocument();
+    expect(twitterLink).toBeInTheDocument();
+    expect(githubLink).toBeInTheDocument();
+    expect(linkedinLink).toBeInTheDocument();
   });
 });
