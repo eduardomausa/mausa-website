@@ -1,11 +1,15 @@
 import styles from "./styles.module.scss";
 import Menu from "../Menu";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <p className={styles.logo}>{`</>`}</p>
+        <Link href="/">
+          <p className={styles.logo}>{`</>`}</p>
+        </Link>
+
         <Menu />
       </div>
     </header>
