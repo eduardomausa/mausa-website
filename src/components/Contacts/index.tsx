@@ -6,7 +6,7 @@ export default function Contacts() {
   return (
     <div className={styles.contactsContainer}>
       <Link
-        href="https://www.linkedin.com/in/eduardomausa/"
+        href="https://www.linkedin.com/in/eduardo-mausa"
         data-testid="linkedin-link"
       >
         <Linkedin width={32} height={32} data-testid="linkedin-icon" />
