@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Menu from ".";
-import Link from "next/link";
 import "@testing-library/jest-dom/extend-expect";
 
 jest.mock("next/link", () => {

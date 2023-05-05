@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Contacts from ".";
 import "@testing-library/jest-dom/extend-expect";
 
-describe("Contacts", () => {
+describe("Contacts component", () => {
   it("should render social media icons correctly", () => {
     const { getByTestId } = render(<Contacts />);
 
