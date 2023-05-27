@@ -29,7 +29,7 @@ describe("HomeDescription component", () => {
     expect(title).toBeInTheDocument();
 
     const description = getByText(
-      "Desenvolvedor Frontend e Bacharel em Filosofia.",
+      "💻 Software engineer 📚 Philosophy graduate",
     );
     expect(description).toBeInTheDocument();
 

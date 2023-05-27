@@ -9,7 +9,8 @@ export default function HomeDescription() {
         <Avatar />
         <h1 className={styles.title}>Eduardo Mausa</h1>
         <p className={styles.description}>
-          Desenvolvedor Frontend e Bacharel em Filosofia.
+          💻 &nbsp; Software engineer <br />
+          📚 &nbsp; Philosophy graduate
         </p>
         <Contacts />
       </div>
