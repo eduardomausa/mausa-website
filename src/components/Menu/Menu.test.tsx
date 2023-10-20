@@ -19,8 +19,8 @@ describe("Menu component", () => {
   it("should render the menu component with links", () => {
     render(<Menu />);
 
-    const homeLink = screen.getByText("Home");
-    const postsLink = screen.getByText("Posts");
+    const homeLink = screen.getByText("home");
+    const postsLink = screen.getByText("posts");
 
     expect(homeLink).toBeInTheDocument();
     expect(postsLink).toBeInTheDocument();

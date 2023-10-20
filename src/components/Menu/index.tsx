@@ -4,8 +4,8 @@ import styles from "./styles.module.scss";
 export default function Menu() {
   return (
     <nav className={styles.menu}>
-      <Link href="/">Home</Link>
-      <Link href="/posts">Posts</Link>
+      <Link href="/">home</Link>
+      <Link href="/posts">posts</Link>
     </nav>
   );
 }

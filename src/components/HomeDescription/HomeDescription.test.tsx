@@ -25,11 +25,11 @@ describe("HomeDescription component", () => {
   it("should render the home description component correctly", () => {
     const { getByText, getByTestId } = render(<HomeDescription />);
 
-    const title = getByText("Eduardo Mausa");
+    const title = getByText("eduardo mausa");
     expect(title).toBeInTheDocument();
 
     const description = getByText(
-      "💻 Software engineer 📚 Philosophy graduate",
+      "💻 software engineer 📚 philosophy graduate",
     );
     expect(description).toBeInTheDocument();
 

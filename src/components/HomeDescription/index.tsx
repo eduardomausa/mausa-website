@@ -7,10 +7,10 @@ export default function HomeDescription() {
     <div className={styles.homeDescriptionContainer}>
       <div className={styles.infoContainer}>
         <Avatar />
-        <h1 className={styles.title}>Eduardo Mausa</h1>
+        <h1 className={styles.title}>eduardo mausa</h1>
         <p className={styles.description}>
-          💻 &nbsp; Software engineer <br />
-          📚 &nbsp; Philosophy graduate
+          💻 &nbsp; software engineer <br />
+          📚 &nbsp; philosophy graduate
         </p>
         <Contacts />
       </div>
