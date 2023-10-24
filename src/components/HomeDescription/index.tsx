@@ -12,7 +12,6 @@ export default function HomeDescription() {
           💻 &nbsp; software engineer <br />
           📚 &nbsp; philosophy graduate
         </p>
-        <Contacts />
       </div>
     </div>
   );
