@@ -1,52 +1,18 @@
-import { GetStaticProps } from "next";
-import { getPrismiscClient } from "../../services/prismic/prismic";
-import styles from "./styles.module.scss";
-import Link from "next/link";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import PostsList from "@/components/PostsList/PostsList";
+import { getPrismiscClient } from "@/services/prismic/prismic";
 
-type Post = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  updatedAt: string;
-};
-
-interface PostsProps {
-  posts: Post[];
-}
-
-export default function Posts({ posts }: PostsProps) {
-  return (
-    <>
-      <Header />
-      <main className={styles.container}>
-        <div className={styles.posts}>
-          {posts.length <= 0 ? (
-            <div>
-              <p>Work in progress</p>
-            </div>
-          ) : null}
-          {posts?.map((post) => (
-            <Link key={post.slug} href={`/posts/${post.slug}`}>
-              <time>{post.updatedAt}</time>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-            </Link>
-          ))}{" "}
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-}
-
-export const getStaticProps: GetStaticProps = async () => {
+async function getPostsList() {
   const client = getPrismiscClient();
 
   const response = await client.getAllByType("post");
 
-  const posts = response.map((post) => {
+  return response.map((post) => {
+    if (!post.uid) {
+      throw new Error("Post is missing uid");
+    }
+
     return {
       slug: post.uid,
       title: post.data.title,
@@ -64,8 +30,16 @@ export const getStaticProps: GetStaticProps = async () => {
       ),
     };
   });
+}
 
-  return {
-    props: { posts },
-  };
-};
+export default async function PostsListPage() {
+  const posts = await getPostsList();
+
+  return (
+    <>
+      <Header />
+      <PostsList posts={posts} />
+      <Footer />
+    </>
+  );
+}

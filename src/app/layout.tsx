@@ -1,31 +1,31 @@
-import type { Metadata } from 'next'
-import { Comfortaa, Montserrat } from 'next/font/google'
+import type { Metadata } from "next";
+import { Comfortaa, Montserrat } from "next/font/google";
 import "./global.scss";
-import PrismicProviders from '../context/PrismicProviders/PrismicProviders';
+import PrismicProviders from "@/context/PrismicProviders/PrismicProviders";
 
 const comfortaa = Comfortaa({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-comfortaa'
-})
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-comfortaa",
+});
 
 const montserrat = Montserrat({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-montserrat'
-})
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
 export const metadata: Metadata = {
-  title: 'Eduardo Mausa',
-  description: 'Eduardo Mausa personal website',
-}
+  title: "Eduardo Mausa",
+  description: "Eduardo Mausa personal website",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -33,10 +33,8 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon-white.ico" type="image/png" />
       </head>
       <body className={`${comfortaa.variable} ${montserrat.variable}`}>
-        <PrismicProviders>
-          {children}
-        </PrismicProviders>
+        <PrismicProviders>{children}</PrismicProviders>
       </body>
     </html>
-  )
+  );
 }

@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.copyrightContainer}>
         <Contacts />
         <div className={styles.copyrightTitleContainer}>
-          <p className={styles.copyrightText}>&#169; eduardo mausa 2023</p>
+          <p className={styles.copyrightText}>&#169; eduardo mausa 2025</p>
         </div>
       </div>
     </footer>
