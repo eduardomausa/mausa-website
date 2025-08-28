@@ -1,8 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Menu from ".";
-import Link from "next/link";
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom";
 
 jest.mock("next/link", () => {
   // eslint-disable-next-line react/display-name
