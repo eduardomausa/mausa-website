@@ -5,9 +5,7 @@ import { getPrismiscClient } from "@/services/prismic/prismic";
 import styles from "./styles.module.scss";
 
 interface PostProps {
-  params: {
-    slug: string;
-  };
+  params?: Promise<{ slug: string }>;
 }
 
 interface Post {
@@ -19,7 +17,7 @@ interface Post {
 
 async function getPost(slug: string): Promise<Post> {
   const prismic = getPrismiscClient();
-  const response = await prismic.getByUID("post", slug, {});
+  const response = await prismic.getByUID("post", slug);
 
   return {
     slug,
@@ -37,7 +35,11 @@ async function getPost(slug: string): Promise<Post> {
 }
 
 export default async function PostPage({ params }: PostProps) {
-  const post = await getPost(params.slug);
+  const resolvedParams = await params;
+  if (!resolvedParams || !resolvedParams.slug) {
+    throw new Error("Missing slug param for post page");
+  }
+  const post = await getPost(resolvedParams.slug);
 
   return (
     <>
