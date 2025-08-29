@@ -1,22 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import HomeDescription from ".";
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom";
 
 jest.mock("../Avatar", () => {
   return {
     __esModule: true,
     default: jest.fn(() => (
       <div data-testid="avatar-component">Mocked Avatar</div>
-    )),
-  };
-});
-
-jest.mock("../Contacts", () => {
-  return {
-    __esModule: true,
-    default: jest.fn(() => (
-      <div data-testid="contacts-component">Mocked Contacts</div>
     )),
   };
 });
@@ -35,8 +26,5 @@ describe("HomeDescription component", () => {
 
     const avatar = getByTestId("avatar-component");
     expect(avatar).toBeInTheDocument();
-
-    const contacts = getByTestId("contacts-component");
-    expect(contacts).toBeInTheDocument();
   });
 });

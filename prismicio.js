@@ -29,6 +29,11 @@ const routes = [
 export const createClient = (config = {}) => {
   const client = prismic.createClient(sm.apiEndpoint, {
     routes,
+    fetchOptions: process.env.NODE_ENV === 'production' ? { 
+      next: { revalidate: 3600 } // Cache for 1 hour in production
+    } : { 
+      next: { revalidate: 0 } // No cache in development
+    },
     ...config,
   });
 
