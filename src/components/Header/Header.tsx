@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Menu from "../Menu";
 import styles from "./styles.module.scss";
+import Menu from "../Menu/Menu";
 
 export default function Header() {
   return (

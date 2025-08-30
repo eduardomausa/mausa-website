@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Footer from ".";
 import "@testing-library/jest-dom";
+import Footer from "./Footer";
 
 describe("Footer component", () => {
   it("should render copyright text with correct year and name", () => {
