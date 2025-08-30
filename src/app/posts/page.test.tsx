@@ -1,4 +1,4 @@
-import { getPostsList } from "./page";
+import { getPostsList } from "@/services/prismic/getPostsList";
 
 jest.mock("../../services/prismic/prismic", () => ({
   getPrismiscClient: () => ({
@@ -42,7 +42,7 @@ describe("getPostsList error cases", () => {
       }),
     }));
 
-    const { getPostsList } = await import("./page");
+    const { getPostsList } = await import("@/services/prismic/getPostsList");
 
     await expect(getPostsList()).rejects.toThrow("Post is missing uid");
   });
@@ -67,7 +67,7 @@ describe("getPostsList content fallback", () => {
       }),
     }));
 
-    const { getPostsList } = await import("./page");
+    const { getPostsList } = await import("@/services/prismic/getPostsList");
     const posts = await getPostsList();
     expect(posts[0].excerpt).toBe("");
   });

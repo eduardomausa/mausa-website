@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
-import PostPage, { getPost } from "./page";
+import PostPage from "./page";
+import { getPost } from "@/services/prismic/getPost";
 
 jest.mock("../../../services/prismic/prismic", () => ({
   getPrismiscClient: () => ({
