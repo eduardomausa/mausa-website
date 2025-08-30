@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   width: 140px;
-  font-family: "Montserrat";
-  font-size: 1.25rem;
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
 
   @media (min-width: 768px) {
     width: 180px;

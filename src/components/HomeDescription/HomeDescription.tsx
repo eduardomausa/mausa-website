@@ -1,5 +1,4 @@
-import Avatar from "../Avatar";
-import Contacts from "../Contacts";
+import Avatar from "../Avatar/Avatar";
 import styles from "./styles.module.scss";
 
 export default function HomeDescription() {

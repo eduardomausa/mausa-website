@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Header from ".";
 import "@testing-library/jest-dom";
-import Menu from "../Menu";
+import Header from "./Header";
+import Menu from "../Menu/Menu";
 
-jest.mock("../Menu", () => {
+jest.mock("../Menu/Menu", () => {
   return {
     __esModule: true,
     default: jest.fn(() => <div data-testid="mocked-menu">Mocked Menu</div>),
