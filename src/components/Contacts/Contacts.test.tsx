@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Contacts from ".";
 import "@testing-library/jest-dom";
+import Contacts from "./Contacts";
 
 describe("Contacts", () => {
   it("should render social media icons correctly", () => {

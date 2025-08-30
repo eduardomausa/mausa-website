@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { Comfortaa, Montserrat } from "next/font/google";
 import "./global.scss";
 import PrismicProviders from "@/context/PrismicProviders/PrismicProviders";
+import { Metadata } from "next";
 
 const comfortaa = Comfortaa({
   weight: ["400", "500", "600", "700"],

@@ -1,6 +1,6 @@
+import Link from "next/link";
 import styles from "./styles.module.scss";
 import { Twitter, GitHub, Linkedin } from "react-feather";
-import Link from "next/link";
 
 export default function Contacts() {
   return (

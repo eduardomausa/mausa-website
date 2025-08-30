@@ -1,8 +1,8 @@
 import PrismicDOM from "prismic-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { getPrismiscClient } from "@/services/prismic/prismic";
 import styles from "./styles.module.scss";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 interface PostProps {
   params?: Promise<{ slug: string }>;
@@ -15,7 +15,7 @@ interface Post {
   updatedAt: string;
 }
 
-async function getPost(slug: string): Promise<Post> {
+export async function getPost(slug: string): Promise<Post> {
   const prismic = getPrismiscClient();
   const response = await prismic.getByUID("post", slug);
 

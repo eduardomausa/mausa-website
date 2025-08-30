@@ -1,9 +1,9 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import PostsList from "@/components/PostsList/PostsList";
 import { getPrismiscClient } from "@/services/prismic/prismic";
 
-async function getPostsList() {
+export async function getPostsList() {
   const client = getPrismiscClient();
 
   const response = await client.getAllByType("post");

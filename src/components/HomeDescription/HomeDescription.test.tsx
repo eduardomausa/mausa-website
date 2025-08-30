@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import HomeDescription from ".";
 import "@testing-library/jest-dom";
+import HomeDescription from "./HomeDescription";
 
-jest.mock("../Avatar", () => {
+jest.mock("../Avatar/Avatar", () => {
   return {
     __esModule: true,
     default: jest.fn(() => (

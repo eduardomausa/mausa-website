@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, expect } from "@jest/globals";
-import Avatar from ".";
+import Avatar from "./Avatar";
 
 describe("Avatar component", () => {
   it("it should render the image correctly", () => {
